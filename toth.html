@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziyan’s Pet Shop</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #ffb6c1;
+      padding: 10px;
+      text-align: center;
+    }
+    nav button {
+      margin: 0 10px;
+      padding: 10px 15px;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px;
+      text-align: center;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .pet-card {
+      background: #ffe4e1;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .pet-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #ffc0cb;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    a {
+      color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ziyan’s Pet Shop 🐾</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('pets')">Pets Section</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to Ziyan’s Pet Shop</h2>
+    <p>Find your perfect pet friend! 🐶🐱🐰🐦🐢🐠</p>
+  </section>
+
+  <section id="pets">
+    <h2>Our Lovely Pets</h2>
+    <div class="gallery">
+      <div class="pet-card">
+        <img src="https://place-puppy.com/300x180" alt="Dog">
+        <h3>Dog</h3>
+        <p>Loyal and playful companions.</p>
+      </div>
+      <div class="pet-card">
+        <img src="https://placekitten.com/300/180" alt="Cat">
+        <h3>Cat</h3>
+        <p>Soft, curious, and independent.</p>
+      </div>
+      <div class="pet-card">
+        <img src="https://loremflickr.com/300/180/bird" alt="Bird">
+        <h3>Bird</h3>
+        <p>Chirpy and colorful friends.</p>
+      </div>
+      <div class="pet-card">
+        <img src="https://loremflickr.com/300/180/rabbit" alt="Rabbit">
+        <h3>Rabbit</h3>
+        <p>Fluffy, quiet, and gentle.</p>
+      </div>
+      <div class="pet-card">
+        <img src="https://loremflickr.com/300/180/turtle" alt="Turtle">
+        <h3>Turtle</h3>
+        <p>Calm and long-living buddies.</p>
+      </div>
+      <div class="pet-card">
+        <img src="https://loremflickr.com/300/180/fish" alt="Fish">
+        <h3>Fish</h3>
+        <p>Peaceful and beautiful swimmers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Ziyan’s Pet Shop, we love animals just as much as you do! Our mission is to connect people with the most lovable pets. 🐾</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:mailtoziyantv@gmail.com">mailtoziyantv@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ziyan’s Pet Shop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
